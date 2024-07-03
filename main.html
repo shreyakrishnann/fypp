@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to EcoCoolSustain.com</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background: url('https://i0.wp.com/eos.org/wp-content/uploads/2023/03/tangra-mountains-from-cape-shirreff-antarctica.jpg?fit=1200%2C675&ssl=1') no-repeat center center fixed;
+            background-size: cover;
+            height: 50vh; /* Reduced height */
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .navbar {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+
+        .section {
+            display: none; /* Initially hide all sections */
+            padding: 20px;
+            text-align: center;
+        }
+
+        button {
+            margin: 10px 0;
+            padding: 8px 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .center-button {
+            display: flex;
+            justify-content: center;
+        }
+
+        .product-images {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .product-images img {
+            max-width: 300px;
+            height: auto;
+            margin: 10px;
+        }
+
+        .product-details {
+            text-align: left;
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+
+        h1, h2, h3, p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="navbar">
+            <a href="#" onclick="showSection('about')">About Us</a>
+            <a href="#" onclick="showSection('products')">Products</a>
+        </div>
+    </div>
+
+    <div id="about" class="section">
+        <h1>Welcome to EcoCoolSustain.com</h1>
+        <p>EcoCoolSustain.com is committed to providing sustainable air conditioning solutions that help protect the environment. Our products are designed with eco-friendly materials and energy-efficient technology to reduce carbon footprint while keeping you cool and comfortable.</p>
+        <p>Explore our range of products and services to find the perfect solution for your cooling needs.</p>
+    </div>
+
+    <div id="products" class="section">
+        <h2>Our Products</h2>
+        <button onclick="showProducts('daikin')">Daikin</button>
+        <button onclick="showProducts('lg')">LG</button>
+
+        <!-- Daikin Products -->
+        <div id="daikin-products" class="product-details" style="display:none;">
+            <h3>Daikin Air Conditioners</h3>
+            <p>Explore our range of Daikin air conditioners.</p>
+            <!-- Add Daikin product details as needed -->
+        </div>
+
+        <!-- LG Products -->
+        <div id="lg-products" class="product-details" style="display:none;">
+            <h3>LG Air Conditioners</h3>
+            <div class="product-images">
+                <div>
+                    <img src="https://www.courts.com.sg/media/catalog/product/i/p/ip180180_00.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=770&width=770&canvas=770:770" alt="LG Product Image 1">
+                    <p>LG INVERTER SYSTEM 3 AIRCON ALPHA+ Z3UQ26GFA0 / AMNQ12GSJC0 X 3</p>
+                    <button onclick="viewDetails('lg-product1-details')">View Details</button>
+                    <div id="lg-product1-details" class="product-details" style="display:none;">
+                        <p><strong>Price:</strong> $3188</p>
+                        <p><strong>Star Rating:</strong> 5</p>
+                        <p><strong>PRODUCT FEATURES:</strong></p>
+                        <ul>
+                            <li><strong>Capacity (Indoor Unit):</strong> 12000 Btu X 3</li>
+                            <li><strong>Noise Level:</strong> 29db</li>
+                            <li><strong>Warranty:</strong> 1 Yr Spare Parts & Compressor Full Warranty 2nd yr</li>
+                            <li><strong>Energy Consumption:</strong> 6.46 kw</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://www.courts.com.sg/media/catalog/product/i/p/ip178414_00.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=770&width=770&canvas=770:770" alt="LG Product Image 2">
+                    <p>LG INVERTER SYSTEM 3 AIRCON ALPHA+ Z3UQ26GFA0 / AMNQ09GSJC0 X 2 + AMNQ18GSKC0 X 1 THINQ</p>
+                    <button onclick="viewDetails('lg-product2-details')">View Details</button>
+                    <div id="lg-product2-details" class="product-details" style="display:none;">
+                        <p><strong>Price:</strong> $3245</p>
+                        <p><strong>Star Rating:</strong> 5</p>
+                        <p><strong>PRODUCT FEATURES:</strong></p>
+                        <ul>
+                            <li><strong>Capacity (Indoor Unit):</strong> 9000 Btu X 2 / 18000 Btu X 1</li>
+                            <li><strong>Noise Level:</strong> 34db</li>
+                            <li><strong>Warranty:</strong> 1 Yr Spare Parts & Compressor Full Warranty 2nd Yr To 5th Yr Compressor</li>
+                            <li><strong>Energy Consumption:</strong> 6.46 kw</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://www.courts.com.sg/media/catalog/product/i/p/ip178837_00.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=770&width=770&canvas=770:770" alt="LG Product Image 3">
+                    <p>LG INVERTER SYSTEM 3 AIRCON ALPHA+ Z4UQ28GFA0 / AMNQ09GSJC0 X 1 + AMNQ12GSJC0 X 1+ AMNQ24GSKC0 X 1</p>
+                    <button onclick="viewDetails('lg-product3-details')">View Details</button>
+                    <div id="lg-product3-details" class="product-details" style="display:none;">
+                        <p><strong>Price:</strong> $3354</p>
+                        <p><strong>Star Rating:</strong> 5</p>
+                        <p><strong>PRODUCT FEATURES:</strong></p>
+                        <ul>
+                            <li><strong>Capacity (Indoor Unit):</strong> 9000 Btu X 1 / 12000 Btu X 1 / 18000 Btu X 1</li>
+                            <li><strong>Noise Level:</strong> 34db</li>
+                            <li><strong>Warranty:</strong> 1 Yr Spare Parts & Compressor Full Warranty 2nd</li>
+                            <li><strong>Energy Consumption:</strong> 7.51 kw</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.style.display = 'none';
+            });
+            // Show the requested section
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        function showProducts(brand) {
+            // Hide all product details initially
+            document.querySelectorAll('.product-details').forEach(detail => {
+                detail.style.display = 'none';
+            });
+
+            // Show products based on brand
+            if (brand === 'daikin') {
+                document.getElementById('daikin-products').style.display = 'block';
+            } else if (brand === 'lg') {
+                document.getElementById('lg-products').style.display = 'block';
+            }
+        }
+
+        function viewDetails(productName) {
+            // Hide all product details initially
+            document.querySelectorAll('.product-details').forEach(detail => {
+                detail.style.display = 'none';
+            });
+
+            // Show details for the selected product
+            if (productName === 'lg-product1-details') {
+                document.getElementById('lg-product1-details').style.display = 'block';
+            } else if (productName === 'lg-product2-details') {
+                document.getElementById('lg-product2-details').style.display = 'block';
+            } else if (productName === 'lg-product3-details') {
+                document.getElementById('lg-product3-details').style.display = 'block';
+            }
+        }
+
+        // Optionally show the About section by default
+        showSection('about'); // Comment this line if no section should be shown by default
+    </script>
+</body>
+</html>
